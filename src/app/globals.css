@@ -57,7 +57,7 @@
   margin-top: 30px;
   transition: 0.2s ease;
   font-size: 14px;
-  color: whitesmoke;
+  color: rgb(209, 233, 255);
   font-weight: bolder;
   background: linear-gradient(90deg, #1087F3 0%, #AC43E0 76%);
   animation: fade-slide-from-right ease 2.5s;
@@ -93,19 +93,49 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  animation: aboutOnLoad ease 4s;
 }
 
 .AboutImage {
-  width: 940px;
-  height: 788px;
+  width: 752px;
+  height: 630.4px;
   border-radius: 5%;
   background-color: #242424;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.3s ease;
+  transition: 1s ease;
+  border: solid 4px #898989;
+  position: relative;
 }
 
+.aboutBtn {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  background: rgb(172, 67, 224);
+  color: rgb(209, 233, 255);
+}
+.aboutBtn * {
+  height: 60px;
+  width: 60px;
+}
+.aboutBtn:hover {
+  box-shadow: 0 5px 15px rgba(202, 200, 204, 0.4);
+}
+.aboutBtnRight {
+  right: -30px;
+  top: calc(50% - 30px);
+}
+.aboutBtnLeft {
+  left: -30px;
+  top: calc(50% - 30px);
+}
+.hide {
+  visibility: hidden;
+}
 .about1 {
   background-image: url('./about/images/About_Treasury_1.png');
 }
@@ -113,30 +143,123 @@
   background-image: url('./about/images/About_Treasury_2.png');
 }
 .about3 {
-  background-image: url('./about/images/About_Treasury_3.png');
+  background-image: url('./about/images/About_Treasury_3a.png');
+  animation: about3animation ease 4s;
 }
-.about4 {
-  background-image: url('./about/images/About_Treasury_4.png');
-}
-.about5 {
-  background-image: url('./about/images/About_Treasury_5.png');
-}
-.about6 {
-  background-image: url('./about/images/About_Treasury_6.png');
-}
-.about7 {
-  background-image: url('./about/images/About_Treasury_7.png');
-}
-.about8 {
-  background-image: url('./about/images/About_Treasury_8.png');
-}
-@media screen and (max-width: 1000px) {
-  .AboutImage {
-    width: 752px;
-    height: 630.4px;
+@keyframes about3animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_3.png');
+  }
+  50% {
+    background-image: url('./about/images/About_Treasury_3.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_3a.png');
   }
 }
-@media screen and (max-width: 800px) {
+.about4 {
+  background-image: url('./about/images/About_Treasury_4a.png');
+  animation: about4animation ease 3s;
+}
+@keyframes about4animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_4.png');
+  }
+  80% {
+    background-image: url('./about/images/About_Treasury_4.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_4a.png');
+  }
+}
+.about5 {
+  background-image: url('./about/images/About_Treasury_5a.png');
+  animation: about5animation ease 3s;
+}
+@keyframes about5animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_5.png');
+  }
+  50% {
+    background-image: url('./about/images/About_Treasury_5.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_5a.png');
+  }
+}
+.about6 {
+  background-image: url('./about/images/About_Treasury_6a.png');
+  animation: about6animation ease 3s;
+}
+@keyframes about6animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_6.png');
+  }
+  60% {
+    background-image: url('./about/images/About_Treasury_6.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_6a.png');
+  }
+}
+.about7 {
+  background-image: url('./about/images/About_Treasury_7c.png');
+  animation: about7animation ease 5s;
+}
+@keyframes about7animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_7.png');
+  }
+  40% {
+    background-image: url('./about/images/About_Treasury_7.png');
+  }
+  60% {
+    background-image: url('./about/images/About_Treasury_7a.png');
+  }
+  80% {
+    background-image: url('./about/images/About_Treasury_7b.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_7c.png');
+  }
+}
+.about8 {
+  background-image: url('./about/images/About_Treasury_8i.png');
+  animation: about8animation ease 13s;
+}
+@keyframes about8animation {
+  0% {
+    background-image: url('./about/images/About_Treasury_8.png');
+  }
+  10% {
+    background-image: url('./about/images/About_Treasury_8.png');
+  }
+  20% {
+    background-image: url('./about/images/About_Treasury_8b.png');
+  }
+  30% {
+    background-image: url('./about/images/About_Treasury_8c.png');
+  }
+  40% {
+    background-image: url('./about/images/About_Treasury_8d.png');
+  }
+  50% {
+    background-image: url('./about/images/About_Treasury_8e.png');
+  }
+  60% {
+    background-image: url('./about/images/About_Treasury_8f.png');
+  }
+  70% {
+    background-image: url('./about/images/About_Treasury_8g.png');
+  }
+  80% {
+    background-image: url('./about/images/About_Treasury_8h.png');
+  }
+  100% {
+    background-image: url('./about/images/About_Treasury_8i.png');
+  }
+}
+@media screen and (max-width: 850px) {
   .AboutImage {
     width: 564px;
     height: 472.8px;
@@ -148,13 +271,20 @@
     height: 315.2px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .AboutImage {
     width: 347.8px;
     height: 291.56px;
   }
+  .aboutBtnRight {
+    right: 15%;
+    top: 115%;
+  }
+  .aboutBtnLeft {
+    left: 15%;
+    top: 115%;
+  }
 }
-
 @keyframes bubbles {
   100% {
     transform: translateY(100vh) scale(1)
@@ -163,18 +293,17 @@
     transform: translateY(-10vh) scale(0)
   }
 }
-
-@keyframes fadein {
+@keyframes aboutOnLoad {
   0% {
     opacity: 0;
-    transform: translateY(-20vh);
+    transform: translateY(20vh);
   }
-  20% {
+  60% {
     opacity: 0;
-    transform: translateY(-20vh);
+    transform: translateY(5vh);
   }
   100% {
-    opacity: 0.3;
+    opacity: 1;
   }
 }
 @keyframes fade-slide-from-right {
