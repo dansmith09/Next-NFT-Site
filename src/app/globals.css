@@ -9,6 +9,7 @@
   background: rgb(12, 0, 44);
   width: 100%;
   overflow: hidden;
+  position: fixed;
 }
 
 .bubbles {
@@ -35,22 +36,12 @@
 .bubbles span:nth-child(even) {
   background: rgb(172, 67, 224, 0.4);
   box-shadow: 0 0 0 10px rgb(172, 67, 224, 0.4),
-  0 0 50px rgb(172, 67, 224, 0.4),
-  0 0 100px rgb(172, 67, 224, 0.4);
+  0 0 25px rgb(172, 67, 224, 0.4),
+  0 0 50px rgb(172, 67, 224, 0.4);
 }
 
 .eth {
  color: rgb(209, 233, 255);
-}
-
-.fadeBackground {
-  width: 100vw;
-  height: 10vh;
-  overflow: hidden;
-  background: #242424;
-  opacity: 0.3;
-  animation: fadein ease 2.5s;
-  -webkit-animation: fadein ease 2.5s;
 }
 
 .connectWalletBtn {
@@ -63,7 +54,8 @@
   border-radius: 20px;
   border: none;
   margin: 20px;
-  transition: 0.2s;
+  margin-top: 30px;
+  transition: 0.2s ease;
   font-size: 14px;
   color: whitesmoke;
   font-weight: bolder;
@@ -72,8 +64,95 @@
 }
 
 .connectWalletBtn:hover {
-  color: rgba(255, 255, 255, 1);
+  /* color: rgba(255, 255, 255, 1); */
   box-shadow: 0 5px 15px rgba(202, 200, 204, 0.4);
+}
+
+.NFT {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+  background-image: url('../NFT.png');
+  background-size: contain;
+  animation: fade-slide-from-left ease 2.5s;
+  transition: 0.3s ease;
+}
+
+.NFT:hover {
+  background-image: url('../NFT2.png');
+  transform: rotate(360deg);
+}
+
+.AboutImageContainer {
+  position: fixed;
+  top: 120px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.AboutImage {
+  width: 940px;
+  height: 788px;
+  border-radius: 5%;
+  background-color: #242424;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease;
+}
+
+.about1 {
+  background-image: url('./about/images/About_Treasury_1.png');
+}
+.about2 {
+  background-image: url('./about/images/About_Treasury_2.png');
+}
+.about3 {
+  background-image: url('./about/images/About_Treasury_3.png');
+}
+.about4 {
+  background-image: url('./about/images/About_Treasury_4.png');
+}
+.about5 {
+  background-image: url('./about/images/About_Treasury_5.png');
+}
+.about6 {
+  background-image: url('./about/images/About_Treasury_6.png');
+}
+.about7 {
+  background-image: url('./about/images/About_Treasury_7.png');
+}
+.about8 {
+  background-image: url('./about/images/About_Treasury_8.png');
+}
+@media screen and (max-width: 1000px) {
+  .AboutImage {
+    width: 752px;
+    height: 630.4px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .AboutImage {
+    width: 564px;
+    height: 472.8px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .AboutImage {
+    width: 376px;
+    height: 315.2px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .AboutImage {
+    width: 347.8px;
+    height: 291.56px;
+  }
 }
 
 @keyframes bubbles {
@@ -106,6 +185,19 @@
   40% {
     opacity: 0;
     transform: translateX(20vh);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20vh);
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(-20vh);
   }
   100% {
     opacity: 1;
