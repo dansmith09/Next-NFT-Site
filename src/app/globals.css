@@ -21,26 +21,59 @@
   position: relative;
   width: 15px;
   height: 15px;
-  background: rgb(54, 191, 228);
+  background: rgb(16, 135, 243, 0.4);
   margin: 0 4px;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px rgb(54, 191, 228, 0.4),
-  0 0 25px rgb(54, 191, 228),
-  0 0 50px rgb(54, 191, 228);
+  box-shadow: 0 0 0 10px rgb(16, 135, 243, 0.4),
+  0 0 25px rgb(16, 135, 243, 0.4),
+  0 0 50px rgb(16, 135, 243, 0.4);
   /* transform: translateY(100vh) scale(0); */
   animation: bubbles 15s linear infinite;
   animation-duration: calc(1200s / var(--i));
 }
 
 .bubbles span:nth-child(even) {
-  background: rgb(170, 71, 246);
-  box-shadow: 0 0 0 10px rgb(170, 71, 246, 0.4),
-  0 0 50px rgb(170, 71, 246),
-  0 0 100px rgb(170, 71, 246);
+  background: rgb(172, 67, 224, 0.4);
+  box-shadow: 0 0 0 10px rgb(172, 67, 224, 0.4),
+  0 0 50px rgb(172, 67, 224, 0.4),
+  0 0 100px rgb(172, 67, 224, 0.4);
 }
 
 .eth {
  color: rgb(209, 233, 255);
+}
+
+.fadeBackground {
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  background: #242424;
+  opacity: 0.3;
+  animation: fadein ease 2.5s;
+  -webkit-animation: fadein ease 2.5s;
+}
+
+.connectWalletBtn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 20px;
+  border: none;
+  margin: 20px;
+  transition: 0.2s;
+  font-size: 14px;
+  color: whitesmoke;
+  font-weight: bolder;
+  background: linear-gradient(90deg, #1087F3 0%, #AC43E0 76%);
+  animation: fade-slide-from-right ease 2.5s;
+}
+
+.connectWalletBtn:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(202, 200, 204, 0.4);
 }
 
 @keyframes bubbles {
@@ -49,5 +82,32 @@
   }
   0% {
     transform: translateY(-10vh) scale(0)
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-20vh);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(-20vh);
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes fade-slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20vh);
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(20vh);
+  }
+  100% {
+    opacity: 1;
   }
 }

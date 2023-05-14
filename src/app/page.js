@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import Background from './components/background'
-import { FaEthereum } from 'react-icons/fa'
+import Background from './components/Background'
+import WalletBtn from './components/WalletBtn'
 
 export default function Home() {
   return (
     <main>
       <Background />
+      <WalletBtn />
     </main>
   )
 }
