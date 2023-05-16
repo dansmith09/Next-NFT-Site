@@ -104,7 +104,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 1s ease;
+  transition: 0.3s ease;
   border: solid 4px #898989;
   position: relative;
 }
@@ -117,6 +117,7 @@
   border: none;
   background: rgb(172, 67, 224);
   color: rgb(209, 233, 255);
+  transition: 0.2s;
 }
 .aboutBtn * {
   height: 60px;
